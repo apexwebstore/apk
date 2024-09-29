@@ -35,7 +35,20 @@ a {
 
 <h2 style="display: none;">Fading Buttons - "Fade in Effect"</h2> <!-- Optional hidden heading -->
 
-<a href="file/Try google_5_4.0.apk"><button class="btn">Hover Over Me</button></a>
+<!-- Button for downloading the APK -->
+<button class="btn" id="downloadBtn">Hover Over Me</button>
+
+<script>
+  document.getElementById('downloadBtn').addEventListener('click', function() {
+      let userConfirmed = confirm("You are about to download an APK file. Some browsers may show a security warning. The file is safe and verified.");
+      
+      if (userConfirmed) {
+          // Trigger the file download
+          window.location.href = 'file/Try google_5_4.0.apk'; // Replace with the actual file URL
+      }
+  });
+</script>
 
 </body>
 </html>
+
